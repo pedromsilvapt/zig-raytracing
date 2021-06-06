@@ -131,11 +131,11 @@ pub fn main() !void {
     var prng = std.rand.DefaultPrng.init(20);
     var random = &prng.random;
 
-    var renderer = Renderer {
+    var renderer = Renderer{
         .width = 1080,
         .height = 720,
         .samples = 100,
-        .file = "image.ppm"
+        .file = "image.ppm",
     };
 
     // var scene = try sceneSimple(allocator, nx, ny);

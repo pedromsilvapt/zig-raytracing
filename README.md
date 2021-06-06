@@ -5,7 +5,7 @@ Implementation of a very simple raytracing renderer following the great guide in
 ![Image](sample.png)
 
 ## Installation
-This project was developed on Zig 0.6. Zig is a fast moving language, newer versions
+This project was developed on Zig 0.8. Zig is a fast moving language, newer versions
 might not be able to compile it.
 
 ```bash
@@ -17,5 +17,5 @@ zig build -Drelease-fast
 ## Usage
 The compiled application can be ran directly from the command line.
 ```bash
-./zig-cache/bin/raytracing
+./zig-out/bin/raytracing
 ```

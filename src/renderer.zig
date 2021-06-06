@@ -30,7 +30,6 @@ pub const Renderer = struct {
         return Vec3.init(1, 1, 1).mulF(1 - t).add(Vec3.init(0.5, 0.7, 1).mulF(t));
     }
 
-
     pub fn run(self: *Renderer, scene: *const Scene, random: *Random) !void {
         var file = try std.fs.cwd().createFile(self.file, .{ .truncate = true });
         defer file.close();
@@ -55,7 +54,7 @@ pub const Renderer = struct {
 
             while (i < self.width) : (i += 1) {
                 pixel_name = try fmt.bufPrint(&pixel_name_buf, "Pixel {}x{}", .{ i, j });
-                var pixel = root_node.start(pixel_name, null);
+                var pixel = root_node.start(pixel_name, 0);
                 pixel.activate();
                 progress.maybeRefresh();
 

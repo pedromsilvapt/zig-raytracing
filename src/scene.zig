@@ -67,7 +67,6 @@ pub const SceneObject = union(enum) {
 
                 return null;
             },
-            else => unreachable,
         }
     }
 };
